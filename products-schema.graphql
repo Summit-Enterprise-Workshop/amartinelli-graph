@@ -1,5 +1,12 @@
 extend schema
-  @link(url: "https://specs.apollo.dev/federation/v2.8", import: ["@key"])
+  @link(url: "https://specs.apollo.dev/federation/v2.8", import:
+    [
+      "@key",
+      "@tag",
+      "@shareable",
+      "@authenticated"
+    ]
+  )
 
 type Query {
   """
@@ -104,7 +111,7 @@ Variants are the entities that are added to carts and purchased
 type ProductVariant @key(fields: "id") {
   id: ID!
   """
-  Link back to the parent Product SKU
+   back to the parent Product SKU
   """
   parent: Product
 
