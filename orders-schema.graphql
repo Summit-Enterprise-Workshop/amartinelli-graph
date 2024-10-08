@@ -1,9 +1,11 @@
 extend schema
-  @link(url: "https://specs.apollo.dev/federation/v2.8", import: 
+  @link(url: "https://specs.apollo.dev/federation/v2.8", import:
     [
       "@key",
       "@tag",
-      "@shareable"
+      "@shareable",
+      "@authenticated",
+      "@requiresScope"
     ]
   )
 
